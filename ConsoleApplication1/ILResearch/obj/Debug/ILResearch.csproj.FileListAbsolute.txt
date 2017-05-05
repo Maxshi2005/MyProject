@@ -6,3 +6,6 @@ D:\MyProject\ConsoleApplication1\ILResearch\obj\Debug\ILResearch.exe
 D:\MyProject\ConsoleApplication1\ILResearch\obj\Debug\ILResearch.pdb
 D:\MyProject\ConsoleApplication1\ILResearch\bin\Debug\AutoMapper.dll
 D:\MyProject\ConsoleApplication1\ILResearch\bin\Debug\AutoMapper.xml
+D:\MyProject\MyProject\ConsoleApplication1\ILResearch\bin\Debug\ILResearch.exe.config
+D:\MyProject\MyProject\ConsoleApplication1\ILResearch\obj\Debug\ILResearch.exe
+D:\MyProject\MyProject\ConsoleApplication1\ILResearch\obj\Debug\ILResearch.pdb
