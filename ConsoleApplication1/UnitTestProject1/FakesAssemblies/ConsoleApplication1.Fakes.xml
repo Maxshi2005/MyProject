@@ -1,0 +1,263 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ConsoleApplication1.Fakes</name>
+    </assembly>
+    <members>
+        <member name="T:ConsoleApplication1.Fakes.ShimCat">
+            <summary>ConsoleApplication1.Cat 的填充码类型</summary>
+        </member>
+        <member name="M:ConsoleApplication1.Fakes.ShimCat.#ctor">
+            <summary>初始化新的填充码实例</summary>
+        </member>
+        <member name="M:ConsoleApplication1.Fakes.ShimCat.#ctor(ConsoleApplication1.Cat)">
+            <summary>初始化给定实例的新填充码</summary>
+        </member>
+        <member name="T:ConsoleApplication1.Fakes.ShimCat.AllInstances">
+            <summary>为所有实例成员定义填充码</summary>
+        </member>
+        <member name="P:ConsoleApplication1.Fakes.ShimCat.AllInstances.GetNameInt32">
+            <summary>设置 Cat.GetName(Int32 name) 的 填充码</summary>
+        </member>
+        <member name="M:ConsoleApplication1.Fakes.ShimCat.BehaveAsCurrent">
+            <summary>为已填充的类型的所有方法分配“Current”行为</summary>
+        </member>
+        <member name="M:ConsoleApplication1.Fakes.ShimCat.BehaveAsNotImplemented">
+            <summary>为已填充的类型的所有方法分配“NotImplemented”行为</summary>
+        </member>
+        <member name="P:ConsoleApplication1.Fakes.ShimCat.Behavior">
+            <summary>为已填充的类型的所有方法分配行为</summary>
+        </member>
+        <member name="P:ConsoleApplication1.Fakes.ShimCat.Constructor">
+            <summary>设置 Cat.Cat() 的 填充码</summary>
+        </member>
+        <member name="P:ConsoleApplication1.Fakes.ShimCat.GetNameInt32">
+            <summary>设置 Cat.GetName(Int32 name) 的 填充码</summary>
+        </member>
+        <member name="T:ConsoleApplication1.Fakes.ShimDataBaseProvider">
+            <summary>ConsoleApplication1.DataBaseProvider 的填充码类型</summary>
+        </member>
+        <member name="M:ConsoleApplication1.Fakes.ShimDataBaseProvider.#ctor">
+            <summary>初始化新的填充码实例</summary>
+        </member>
+        <member name="M:ConsoleApplication1.Fakes.ShimDataBaseProvider.#ctor(ConsoleApplication1.DataBaseProvider)">
+            <summary>初始化给定实例的新填充码</summary>
+        </member>
+        <member name="T:ConsoleApplication1.Fakes.ShimDataBaseProvider.AllInstances">
+            <summary>为所有实例成员定义填充码</summary>
+        </member>
+        <member name="M:ConsoleApplication1.Fakes.ShimDataBaseProvider.BehaveAsCurrent">
+            <summary>为已填充的类型的所有方法分配“Current”行为</summary>
+        </member>
+        <member name="M:ConsoleApplication1.Fakes.ShimDataBaseProvider.BehaveAsNotImplemented">
+            <summary>为已填充的类型的所有方法分配“NotImplemented”行为</summary>
+        </member>
+        <member name="P:ConsoleApplication1.Fakes.ShimDataBaseProvider.Behavior">
+            <summary>为已填充的类型的所有方法分配行为</summary>
+        </member>
+        <member name="P:ConsoleApplication1.Fakes.ShimDataBaseProvider.Constructor">
+            <summary>设置 DataBaseProvider.DataBaseProvider() 的 填充码</summary>
+        </member>
+        <member name="P:ConsoleApplication1.Fakes.ShimDataBaseProvider.GetConnectionStringBoolean">
+            <summary>设置 DataBaseProvider.GetConnection(String dbName, Boolean isReadDb) 的 填充码</summary>
+        </member>
+        <member name="T:ConsoleApplication1.Fakes.ShimDog">
+            <summary>ConsoleApplication1.Dog 的填充码类型</summary>
+        </member>
+        <member name="M:ConsoleApplication1.Fakes.ShimDog.#ctor">
+            <summary>初始化新的填充码实例</summary>
+        </member>
+        <member name="M:ConsoleApplication1.Fakes.ShimDog.#ctor(ConsoleApplication1.Dog)">
+            <summary>初始化给定实例的新填充码</summary>
+        </member>
+        <member name="T:ConsoleApplication1.Fakes.ShimDog.AllInstances">
+            <summary>为所有实例成员定义填充码</summary>
+        </member>
+        <member name="P:ConsoleApplication1.Fakes.ShimDog.AllInstances.GetNameInt32">
+            <summary>设置 Dog.GetName(Int32 name) 的 填充码</summary>
+        </member>
+        <member name="M:ConsoleApplication1.Fakes.ShimDog.BehaveAsCurrent">
+            <summary>为已填充的类型的所有方法分配“Current”行为</summary>
+        </member>
+        <member name="M:ConsoleApplication1.Fakes.ShimDog.BehaveAsNotImplemented">
+            <summary>为已填充的类型的所有方法分配“NotImplemented”行为</summary>
+        </member>
+        <member name="P:ConsoleApplication1.Fakes.ShimDog.Behavior">
+            <summary>为已填充的类型的所有方法分配行为</summary>
+        </member>
+        <member name="P:ConsoleApplication1.Fakes.ShimDog.Constructor">
+            <summary>设置 Dog.Dog() 的 填充码</summary>
+        </member>
+        <member name="P:ConsoleApplication1.Fakes.ShimDog.GetName">
+            <summary>设置 Dog.GetName() 的 填充码</summary>
+        </member>
+        <member name="P:ConsoleApplication1.Fakes.ShimDog.GetNameInt32">
+            <summary>设置 Dog.GetName(Int32 name) 的 填充码</summary>
+        </member>
+        <member name="P:ConsoleApplication1.Fakes.ShimDog.GetNameString">
+            <summary>设置 Dog.GetName(String name) 的 填充码</summary>
+        </member>
+        <member name="T:ConsoleApplication1.Fakes.ShimPet">
+            <summary>ConsoleApplication1.Pet 的填充码类型</summary>
+        </member>
+        <member name="M:ConsoleApplication1.Fakes.ShimPet.#ctor">
+            <summary>初始化新的填充码实例</summary>
+        </member>
+        <member name="M:ConsoleApplication1.Fakes.ShimPet.#ctor(ConsoleApplication1.Pet)">
+            <summary>初始化给定实例的新填充码</summary>
+        </member>
+        <member name="T:ConsoleApplication1.Fakes.ShimPet.AllInstances">
+            <summary>为所有实例成员定义填充码</summary>
+        </member>
+        <member name="M:ConsoleApplication1.Fakes.ShimPet.BehaveAsCurrent">
+            <summary>为已填充的类型的所有方法分配“Current”行为</summary>
+        </member>
+        <member name="M:ConsoleApplication1.Fakes.ShimPet.BehaveAsNotImplemented">
+            <summary>为已填充的类型的所有方法分配“NotImplemented”行为</summary>
+        </member>
+        <member name="P:ConsoleApplication1.Fakes.ShimPet.Behavior">
+            <summary>为已填充的类型的所有方法分配行为</summary>
+        </member>
+        <member name="P:ConsoleApplication1.Fakes.ShimPet.Constructor">
+            <summary>设置 Pet.Pet() 的 填充码</summary>
+        </member>
+        <member name="P:ConsoleApplication1.Fakes.ShimPet.Test">
+            <summary>设置 Pet.Test() 的 填充码</summary>
+        </member>
+        <member name="P:ConsoleApplication1.Fakes.ShimPet.TestCat">
+            <summary>设置 Pet.TestCat() 的 填充码</summary>
+        </member>
+        <member name="T:ConsoleApplication1.Fakes.ShimStockAnalyzer">
+            <summary>ConsoleApplication1.StockAnalyzer 的填充码类型</summary>
+        </member>
+        <member name="M:ConsoleApplication1.Fakes.ShimStockAnalyzer.#ctor">
+            <summary>初始化新的填充码实例</summary>
+        </member>
+        <member name="M:ConsoleApplication1.Fakes.ShimStockAnalyzer.#ctor(ConsoleApplication1.StockAnalyzer)">
+            <summary>初始化给定实例的新填充码</summary>
+        </member>
+        <member name="T:ConsoleApplication1.Fakes.ShimStockAnalyzer.AllInstances">
+            <summary>为所有实例成员定义填充码</summary>
+        </member>
+        <member name="P:ConsoleApplication1.Fakes.ShimStockAnalyzer.AllInstances.GetContosoPrice">
+            <summary>设置 StockAnalyzer.GetContosoPrice() 的 填充码</summary>
+        </member>
+        <member name="M:ConsoleApplication1.Fakes.ShimStockAnalyzer.BehaveAsCurrent">
+            <summary>为已填充的类型的所有方法分配“Current”行为</summary>
+        </member>
+        <member name="M:ConsoleApplication1.Fakes.ShimStockAnalyzer.BehaveAsNotImplemented">
+            <summary>为已填充的类型的所有方法分配“NotImplemented”行为</summary>
+        </member>
+        <member name="P:ConsoleApplication1.Fakes.ShimStockAnalyzer.Behavior">
+            <summary>为已填充的类型的所有方法分配行为</summary>
+        </member>
+        <member name="P:ConsoleApplication1.Fakes.ShimStockAnalyzer.ConstructorIStockFeed">
+            <summary>设置 StockAnalyzer.StockAnalyzer(IStockFeed feed) 的 填充码</summary>
+        </member>
+        <member name="P:ConsoleApplication1.Fakes.ShimStockAnalyzer.GetContosoPrice">
+            <summary>设置 StockAnalyzer.GetContosoPrice() 的 填充码</summary>
+        </member>
+        <member name="T:ConsoleApplication1.Fakes.StubCat">
+            <summary>ConsoleApplication1.Cat 的存根类型</summary>
+        </member>
+        <member name="M:ConsoleApplication1.Fakes.StubCat.#ctor">
+            <summary>初始化新实例</summary>
+        </member>
+        <member name="P:ConsoleApplication1.Fakes.StubCat.CallBase">
+            <summary>获取或设置一个值，该值指示是否应调用基方法而不调用回退行为</summary>
+        </member>
+        <member name="M:ConsoleApplication1.Fakes.StubCat.InitializeStub">
+            <summary>初始化 type StubCat 的新实例</summary>
+        </member>
+        <member name="P:ConsoleApplication1.Fakes.StubCat.InstanceBehavior">
+            <summary>获取或设置实例行为。</summary>
+        </member>
+        <member name="P:ConsoleApplication1.Fakes.StubCat.InstanceObserver">
+            <summary>获取或设置实例观察者。</summary>
+        </member>
+        <member name="T:ConsoleApplication1.Fakes.StubDataBaseProvider">
+            <summary>ConsoleApplication1.DataBaseProvider 的存根类型</summary>
+        </member>
+        <member name="M:ConsoleApplication1.Fakes.StubDataBaseProvider.#ctor">
+            <summary>初始化新实例</summary>
+        </member>
+        <member name="P:ConsoleApplication1.Fakes.StubDataBaseProvider.CallBase">
+            <summary>获取或设置一个值，该值指示是否应调用基方法而不调用回退行为</summary>
+        </member>
+        <member name="M:ConsoleApplication1.Fakes.StubDataBaseProvider.InitializeStub">
+            <summary>初始化 type StubDataBaseProvider 的新实例</summary>
+        </member>
+        <member name="P:ConsoleApplication1.Fakes.StubDataBaseProvider.InstanceBehavior">
+            <summary>获取或设置实例行为。</summary>
+        </member>
+        <member name="P:ConsoleApplication1.Fakes.StubDataBaseProvider.InstanceObserver">
+            <summary>获取或设置实例观察者。</summary>
+        </member>
+        <member name="T:ConsoleApplication1.Fakes.StubDog">
+            <summary>ConsoleApplication1.Dog 的存根类型</summary>
+        </member>
+        <member name="M:ConsoleApplication1.Fakes.StubDog.#ctor">
+            <summary>初始化新实例</summary>
+        </member>
+        <member name="P:ConsoleApplication1.Fakes.StubDog.CallBase">
+            <summary>获取或设置一个值，该值指示是否应调用基方法而不调用回退行为</summary>
+        </member>
+        <member name="M:ConsoleApplication1.Fakes.StubDog.InitializeStub">
+            <summary>初始化 type StubDog 的新实例</summary>
+        </member>
+        <member name="P:ConsoleApplication1.Fakes.StubDog.InstanceBehavior">
+            <summary>获取或设置实例行为。</summary>
+        </member>
+        <member name="P:ConsoleApplication1.Fakes.StubDog.InstanceObserver">
+            <summary>获取或设置实例观察者。</summary>
+        </member>
+        <member name="T:ConsoleApplication1.Fakes.StubIStockFeed">
+            <summary>ConsoleApplication1.IStockFeed 的存根类型</summary>
+        </member>
+        <member name="M:ConsoleApplication1.Fakes.StubIStockFeed.#ctor">
+            <summary>初始化 type StubIStockFeed 的新实例</summary>
+        </member>
+        <member name="M:ConsoleApplication1.Fakes.StubIStockFeed.ConsoleApplication1#IStockFeed#GetSharePrice(System.String)">
+            <summary>设置 IStockFeed.GetSharePrice(String company) 的 存根</summary>
+        </member>
+        <member name="F:ConsoleApplication1.Fakes.StubIStockFeed.GetSharePriceString">
+            <summary>设置 IStockFeed.GetSharePrice(String company) 的 stub</summary>
+        </member>
+        <member name="T:ConsoleApplication1.Fakes.StubPet">
+            <summary>ConsoleApplication1.Pet 的存根类型</summary>
+        </member>
+        <member name="M:ConsoleApplication1.Fakes.StubPet.#ctor">
+            <summary>初始化新实例</summary>
+        </member>
+        <member name="P:ConsoleApplication1.Fakes.StubPet.CallBase">
+            <summary>获取或设置一个值，该值指示是否应调用基方法而不调用回退行为</summary>
+        </member>
+        <member name="M:ConsoleApplication1.Fakes.StubPet.InitializeStub">
+            <summary>初始化 type StubPet 的新实例</summary>
+        </member>
+        <member name="P:ConsoleApplication1.Fakes.StubPet.InstanceBehavior">
+            <summary>获取或设置实例行为。</summary>
+        </member>
+        <member name="P:ConsoleApplication1.Fakes.StubPet.InstanceObserver">
+            <summary>获取或设置实例观察者。</summary>
+        </member>
+        <member name="T:ConsoleApplication1.Fakes.StubStockAnalyzer">
+            <summary>ConsoleApplication1.StockAnalyzer 的存根类型</summary>
+        </member>
+        <member name="M:ConsoleApplication1.Fakes.StubStockAnalyzer.#ctor(ConsoleApplication1.IStockFeed)">
+            <summary>初始化新实例</summary>
+        </member>
+        <member name="P:ConsoleApplication1.Fakes.StubStockAnalyzer.CallBase">
+            <summary>获取或设置一个值，该值指示是否应调用基方法而不调用回退行为</summary>
+        </member>
+        <member name="M:ConsoleApplication1.Fakes.StubStockAnalyzer.InitializeStub">
+            <summary>初始化 type StubStockAnalyzer 的新实例</summary>
+        </member>
+        <member name="P:ConsoleApplication1.Fakes.StubStockAnalyzer.InstanceBehavior">
+            <summary>获取或设置实例行为。</summary>
+        </member>
+        <member name="P:ConsoleApplication1.Fakes.StubStockAnalyzer.InstanceObserver">
+            <summary>获取或设置实例观察者。</summary>
+        </member>
+    </members>
+</doc>

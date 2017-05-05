@@ -1,0 +1,225 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dapper.FluentColumnMapping</name>
+    </assembly>
+    <members>
+        <member name="T:Dapper.FluentColumnMapping.ColumnMappingCollection">
+            <summary>
+            A collection of <see cref="T:Dapper.FluentColumnMapping.IMappedType"/>
+            </summary>
+        </member>
+        <member name="P:Dapper.FluentColumnMapping.ColumnMappingCollection.Mappings">
+            <summary>
+                An instance of <see cref="T:System.Collections.Generic.IDictionary`2"/> containing each of the column mappings.
+            </summary>
+        </member>
+        <member name="T:Dapper.FluentColumnMapping.ExtensionMethods">
+            <summary>Class containing extension methods for registering column mappings.</summary>
+            <remarks>
+                <para>
+                    The extension methods herein sometimes return/accept interfaces and sometimes concrete types.
+                </para>
+                <para>
+                    This is intentional so as to have IntelliSense only display the appropriate extension methods when
+                    chaining calls (i.e. mapping fluently).
+                </para>
+                <para>
+                    For example, you shouldn't be able to directly chain multiple calls to
+                    <see cref="M:Dapper.FluentColumnMapping.ExtensionMethods.ToColumn``1(Dapper.FluentColumnMapping.PropertyMapping{``0},System.String)"/>.
+                    You should only be able to call that method after having called
+                    <see cref="!:ExtensionMethods.MapProperty&lt;T&gt;(IMappedType&lt;T&gt;, Expression&lt;Func&lt;T, string&gt;&gt;)"/> or
+                    <see cref="!:ExtensionMethods.MapProperty&lt;T&gt;(IColumnMapping&lt;T&gt;, Expression&lt;Func&lt;T, string&gt;&gt;)"/>.
+                </para>
+            </remarks>
+        </member>
+        <member name="M:Dapper.FluentColumnMapping.ExtensionMethods.RegisterType``1(Dapper.FluentColumnMapping.ColumnMappingCollection)">
+            <summary>Registers a new column mapping for a specific <see cref="T:System.Type"/>.</summary>
+            <typeparam name="T">The <see cref="T:System.Type"/> associated with the column mapping.</typeparam>
+            <param name="mappings">The <see cref="T:Dapper.FluentColumnMapping.ColumnMappingCollection"/> to register the mapping with.</param>
+            <returns>
+                An instance of <see cref="T:Dapper.FluentColumnMapping.MappedType`1"/> that has been
+                registered with the <see cref="T:Dapper.FluentColumnMapping.ColumnMappingCollection"/>
+                provided in the <paramref name="mappings"/> parameter.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">
+                Thrown if the <paramref name="mappings"/> parameter is <c>null</c>.
+            </exception>
+        </member>
+        <member name="M:Dapper.FluentColumnMapping.ExtensionMethods.TypeHasBeenMapped``1(Dapper.FluentColumnMapping.ColumnMappingCollection)">
+            <summary>
+                Gets a <see cref="T:System.Boolean"/> value indicating whether a given <see cref="T:System.Type"/>
+                has been registered with a <see cref="T:Dapper.FluentColumnMapping.ColumnMappingCollection"/>.
+            </summary>
+            <typeparam name="T">The <see cref="T:System.Type"/> to check for.</typeparam>
+            <param name="mappings">The instance of <see cref="T:Dapper.FluentColumnMapping.ColumnMappingCollection"/> to check.</param>
+            <returns>
+                A <see cref="T:System.Boolean"/> value indicating whether a given <see cref="T:System.Type"/>
+                has been registered with a <see cref="T:Dapper.FluentColumnMapping.ColumnMappingCollection"/>.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">
+                Thrown if the <paramref name="mappings"/> parameter is <c>null</c>.
+            </exception>
+        </member>
+        <member name="M:Dapper.FluentColumnMapping.ExtensionMethods.GetTypeMapping``1(Dapper.FluentColumnMapping.ColumnMappingCollection)">
+            <summary>
+                Gets the <see cref="T:Dapper.FluentColumnMapping.MappedType`1"/> for a specific <see cref="T:System.Type"/>
+                that has a mapping registered with a <see cref="T:Dapper.FluentColumnMapping.ColumnMappingCollection"/>.
+            </summary>
+            <typeparam name="T">
+                The registered <see cref="T:System.Type"/> to get the column mappings for.
+            </typeparam>
+            <param name="mappings">
+                The instance of <see cref="T:Dapper.FluentColumnMapping.ColumnMappingCollection"/> containing the registered instance of
+                <see cref="T:Dapper.FluentColumnMapping.MappedType`1"/> associated with the <see cref="T:System.Type"/> specified for <typeparamref name="T"/>.
+            </param>
+            <returns>
+                If the <see cref="T:System.Type"/> specified for <typeparamref name="T"/> has
+                been registered with the <see cref="T:Dapper.FluentColumnMapping.ColumnMappingCollection"/>, then
+                the registered <see cref="T:Dapper.FluentColumnMapping.MappedType`1"/>; otherwise, <c>null</c>.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">
+                Thrown if the <paramref name="mappings"/> parameter is <c>null</c>.
+            </exception>
+        </member>
+        <member name="M:Dapper.FluentColumnMapping.ExtensionMethods.GetTypeMapping``1(Dapper.FluentColumnMapping.ColumnMappingCollection,System.Boolean)">
+            <summary>
+                Gets the <see cref="T:Dapper.FluentColumnMapping.MappedType`1"/> for a specific <see cref="T:System.Type"/>
+                that has a mapping registered with a <see cref="T:Dapper.FluentColumnMapping.ColumnMappingCollection"/>.
+            </summary>
+            <typeparam name="T">
+                The registered <see cref="T:System.Type"/> to get the column mappings for.
+            </typeparam>
+            <param name="mappings">
+                The instance of <see cref="T:Dapper.FluentColumnMapping.ColumnMappingCollection"/> containing the registered instance of
+                <see cref="T:Dapper.FluentColumnMapping.MappedType`1"/> associated with the <see cref="T:System.Type"/> specified for <typeparamref name="T"/>.
+            </param>
+            <param name="throwIfTypeNotMapped"></param>
+            <returns>
+                The <see cref="T:Dapper.FluentColumnMapping.MappedType`1"/> that has been registered with the
+                <see cref="T:Dapper.FluentColumnMapping.ColumnMappingCollection"/> for the <see cref="T:System.Type"/>
+                specified for <typeparamref name="T"/>.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">
+                Thrown if the <paramref name="mappings"/> parameter is <c>null</c>.
+            </exception>
+            <exception cref="T:System.Collections.Generic.KeyNotFoundException">
+                Thrown if the <paramref name="throwIfTypeNotMapped"/> parameter is set to <c>true</c>,
+                and if the <see cref="T:System.Type"/> specified for <typeparamref name="T"/> has not been
+                registered with the <see cref="T:Dapper.FluentColumnMapping.ColumnMappingCollection"/>.
+            </exception>
+        </member>
+        <member name="M:Dapper.FluentColumnMapping.ExtensionMethods.CopyMappingsFrom``1(Dapper.FluentColumnMapping.MappedType{``0},Dapper.FluentColumnMapping.IMappedType)">
+            <summary>Copies the column mappings mapped from one <see cref="T:System.Type"/> to another.</summary>
+            <typeparam name="T">The <see cref="T:System.Type"/> associated with the column mapping.</typeparam>
+            <param name="destinationMappedType">
+                An instance of <see cref="T:Dapper.FluentColumnMapping.MappedType`1"/> where the column mappings are to be copied to.
+            </param>
+            <param name="sourceMappedType">
+                An instance of <see cref="T:Dapper.FluentColumnMapping.IMappedType"/> containing the column mappings that are to be copied.
+            </param>
+            <returns>
+                The instance of <see cref="T:Dapper.FluentColumnMapping.MappedType`1"/> provided via the <paramref name="destinationMappedType"/>
+                parameter including copies of each of the column mappings defined in the <paramref name="mappings"/> parameter.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">
+                Thrown if the <paramref name="destinationMappedType"/> or
+                <paramref name="sourceMappedType"/> parameter is <c>null</c>.
+            </exception>
+        </member>
+        <member name="M:Dapper.FluentColumnMapping.ExtensionMethods.MapProperty``1(Dapper.FluentColumnMapping.IColumnMapping{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Object}})">
+            <summary>Adds a property/field to the mapping.</summary>
+            <typeparam name="T">The <see cref="T:System.Type"/> associated with the column mapping.</typeparam>
+            <param name="columnMapping">
+                An instance of <see cref="T:Dapper.FluentColumnMapping.IColumnMapping`1"/> that has been added to the current mapping.
+            </param>
+            <param name="propertyName">
+                An <see cref="T:System.Linq.Expressions.Expression`1"/> selecting the property/field to add to the mapping.
+            </param>
+            <returns>
+                An instance of <see cref="T:Dapper.FluentColumnMapping.PropertyMapping`1"/> mapped to the property/field
+                specified in the <paramref name="propertyName"/> parameter.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">
+                Thrown if the <paramref name="columnMapping"/> or
+                <paramref name="propertyName"/> parameter is <c>null</c>.
+            </exception>
+        </member>
+        <member name="M:Dapper.FluentColumnMapping.ExtensionMethods.MapProperty``1(Dapper.FluentColumnMapping.IMappedType{``0},System.String)">
+            <summary>Adds a property/field to the mapping.</summary>
+            <typeparam name="T">The <see cref="T:System.Type"/> associated with the column mapping.</typeparam>
+            <param name="mappedType">
+                An instance of <see cref="T:Dapper.FluentColumnMapping.IMappedType`1"/> containing the current mapping.
+            </param>
+            <param name="propertyName">
+                The name of the property/field to add to the mapping.
+            </param>
+            <returns>
+                An instance of <see cref="T:Dapper.FluentColumnMapping.PropertyMapping`1"/> mapped to the property/field
+                specified in the <paramref name="propertyName"/> parameter.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">
+                Thrown if the <paramref name="mappedType"/> or <paramref name="propertyName"/> parameter
+                is <c>null</c>, an empty string, or only consists of white-space characters.
+            </exception>
+        </member>
+        <member name="M:Dapper.FluentColumnMapping.ExtensionMethods.MapProperty``1(Dapper.FluentColumnMapping.IMappedType{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Object}})">
+            <summary>Adds a property/field to the mapping.</summary>
+            <typeparam name="T">The <see cref="T:System.Type"/> associated with the column mapping.</typeparam>
+            <param name="mappedType">
+                An instance of <see cref="T:Dapper.FluentColumnMapping.IMappedType`1"/> containing the current mapping.
+            </param>
+            <param name="propertyName">
+                An <see cref="T:System.Linq.Expressions.Expression`1"/> selecting the property/field to add to the mapping.
+            </param>
+            <returns>
+                An instance of <see cref="T:Dapper.FluentColumnMapping.PropertyMapping`1"/> mapped to the property/field
+                specified in the <paramref name="propertyName"/> parameter.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">
+                Thrown if the <paramref name="mappedType"/> or <paramref name="propertyName"/> parameter is <c>null</c>.
+            </exception>
+        </member>
+        <member name="M:Dapper.FluentColumnMapping.ExtensionMethods.ToColumn``1(Dapper.FluentColumnMapping.PropertyMapping{``0},System.String)">
+            <summary>Maps the specified column name to the provided property/field.</summary>
+            <typeparam name="T">The <see cref="T:System.Type"/> associated with the column mapping.</typeparam>
+            <param name="propertyMapping">The <see cref="T:Dapper.FluentColumnMapping.PropertyMapping`1"/> to associate the column name with.</param>
+            <param name="columnName">The name of the column to map to the property/field.</param>
+            <returns>
+                An instance of <see cref="T:Dapper.FluentColumnMapping.ColumnMapping`1"/> with the column name specified in the
+                <paramref name="columnName"/> parameter mapped to the property/field specified in
+                the <paramref name="propertyName"/> parameter.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">
+                Thrown if the <paramref name="propertyMapping"/> parameter is <c>null</c>.
+            </exception>
+        </member>
+        <member name="M:Dapper.FluentColumnMapping.ExtensionMethods.RegisterWithDapper(Dapper.FluentColumnMapping.ColumnMappingCollection)">
+            <summary>Registers a collection of mapped types with the <see cref="T:Dapper.SqlMapper"/>.</summary>
+            <param name="columnMappingCollection">
+                An instance of <see cref="T:Dapper.FluentColumnMapping.ColumnMappingCollection"/> containing each of the mappings to be registered.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+                Thrown if the <paramref name="columnMappingCollection"/> parameter is <c>null</c>.
+            </exception>
+        </member>
+        <member name="P:Dapper.FluentColumnMapping.IMappedType.MappedType">
+            <summary>Gets the <see cref="T:System.Type"/> being mapped.</summary>
+        </member>
+        <member name="P:Dapper.FluentColumnMapping.IMappedType.Item(System.String)">
+            <summary>Gets the name of the property/field that has been mapped to the specified column name.</summary>
+            <param name="columnName">The name of the column.</param>
+            <returns>The name of the mapped property/field.</returns>
+        </member>
+        <member name="M:Dapper.FluentColumnMapping.IMappedType.ColumnHasBeenMapped(System.String)">
+            <summary>Determines whether a property/field has been mapped to the specified column name.</summary>
+            <param name="columnName">The name of the column.</param>
+            <returns>
+                <c>True</c> if a property/field has been mapped to the specified column; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="P:Dapper.FluentColumnMapping.IMappedType.MappedColumns">
+            <summary>Gets the collection of <see cref="T:System.Collections.Generic.KeyValuePair`2"/> property to column mappings.</summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,2 @@
+v <- "test"
+print(v);

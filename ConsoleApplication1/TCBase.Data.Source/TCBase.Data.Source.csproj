@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: D:\MyProject\ConsoleApplication1\ConsoleApplication1\bin\Debug\TCBase.Data.Source.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BFBB9B15-4079-485F-B4CA-B004AB7BF77D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>TCBase.Data.Source</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <ApplicationVersion>1.1.11.1</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>TCBase.Data</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="TCBase.Config">
+      <HintPath>lib\TCBase.Config.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="TCBase.Core">
+      <HintPath>lib\TCBase.Core.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConfigConvert.cs" />
+    <Compile Include="ConnectionConfig.cs" />
+    <Compile Include="ConnectionItem.cs" />
+    <Compile Include="WeightObject.cs" />
+    <Compile Include="ConnectionLoadBalance.cs" />
+    <Compile Include="ConnStringManager.cs" />
+    <Compile Include="DataBaseConfig.cs" />
+    <Compile Include="DatabaseLogInfo.cs" />
+    <Compile Include="DataSource.cs" />
+    <Compile Include="Pwd.cs" />
+    <Compile Include="Base32String.cs" />
+    <Compile Include="IDbConnectionProperty.cs" />
+    <Compile Include="LogInfo.cs" />
+    <Compile Include="SqlServerHelper.cs" />
+    <Compile Include="TCDbCommand.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TCDbConnection.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

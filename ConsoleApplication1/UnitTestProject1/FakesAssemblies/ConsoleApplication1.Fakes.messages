@@ -1,0 +1,3 @@
+D:\MyProject\ConsoleApplication1\UnitTestProject1\Fakes\ConsoleApplication1.fakes : warning : 无法为 ConsoleApplication1.Program 生成存根: 类型对 exported or assembly(ConsoleApplication1.Fakes) 不可见。
+D:\MyProject\ConsoleApplication1\UnitTestProject1\Fakes\ConsoleApplication1.fakes : warning : 无法为 ConsoleApplication1.Program 生成填充码: 类型对 exported or assembly(ConsoleApplication1.Fakes) 不可见。
+D:\MyProject\ConsoleApplication1\UnitTestProject1\Fakes\ConsoleApplication1.fakes : warning : 无法为 ConsoleApplication1.IStockFeed 生成填充码: 类型是一个接口。

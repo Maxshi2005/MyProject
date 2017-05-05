@@ -1,0 +1,16 @@
+D:\MyProject\ConsoleApplication1\UnitTestProject1\obj\Debug\Fakes\m\b\mscorlib.4.0.0.0.Fakes.xml
+D:\MyProject\ConsoleApplication1\UnitTestProject1\obj\Debug\Fakes\m\b\mscorlib.4.0.0.0.Fakes.dll
+D:\MyProject\ConsoleApplication1\UnitTestProject1\obj\Debug\Fakes\m\b\mscorlib.4.0.0.0.Fakes.pdb
+D:\MyProject\ConsoleApplication1\UnitTestProject1\obj\Debug\Fakes\m\b\ConsoleApplication1.exe
+D:\MyProject\ConsoleApplication1\UnitTestProject1\obj\Debug\Fakes\m\b\Microsoft.QualityTools.Testing.Fakes.dll
+D:\MyProject\ConsoleApplication1\UnitTestProject1\obj\Debug\Fakes\m\b\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\MyProject\ConsoleApplication1\UnitTestProject1\obj\Debug\Fakes\m\b\TCBase.Communication.dll
+D:\MyProject\ConsoleApplication1\UnitTestProject1\obj\Debug\Fakes\m\b\TCBase.Config.dll
+D:\MyProject\ConsoleApplication1\UnitTestProject1\obj\Debug\Fakes\m\b\TCBase.Core.dll
+D:\MyProject\ConsoleApplication1\UnitTestProject1\obj\Debug\Fakes\m\b\TCBase.Data.Source.dll
+D:\MyProject\ConsoleApplication1\UnitTestProject1\obj\Debug\Fakes\m\b\ConsoleApplication1.pdb
+D:\MyProject\ConsoleApplication1\UnitTestProject1\obj\Debug\Fakes\m\b\zh-Hans\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\MyProject\ConsoleApplication1\UnitTestProject1\obj\Debug\Fakes\m\b\zh-Hans\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
+D:\MyProject\ConsoleApplication1\UnitTestProject1\obj\Debug\Fakes\m\o\f.csprojResolveAssemblyReference.cache
+D:\MyProject\ConsoleApplication1\UnitTestProject1\obj\Debug\Fakes\m\o\mscorlib.4.0.0.0.Fakes.dll
+D:\MyProject\ConsoleApplication1\UnitTestProject1\obj\Debug\Fakes\m\o\mscorlib.4.0.0.0.Fakes.pdb
