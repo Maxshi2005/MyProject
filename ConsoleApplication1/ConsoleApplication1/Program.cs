@@ -17,7 +17,6 @@ using Newtonsoft.Json;
 using System.Collections;
 using System.Dynamic;
 using ConsoleApplication1.DapperExample;
-using ConsoleApplication1.Others;
 using System.Threading;
 using ConsoleApplication1.Tree;
 using System.Data.Common;
@@ -67,45 +66,11 @@ namespace ConsoleApplication1
             return 2;
         }
 
-static bool Test3()
+        static bool Test3()
         {
             Console.WriteLine("Test3");
             return true;
         }
-
-        public class Test<T> : ITest<T>
-        {
-            public void print()
-            {
-                Console.WriteLine("Print...");
-            }
-        }
-
-        public interface ITest<T>
-        {
-            void print();
-        }
-
-
-        public class responce
-        {
-            public Jingdong_etms_range_check_responce jingdong_etms_range_check_responce { get; set; }
-        }
-
-
-        public class Jingdong_etms_range_check_responce
-        {
-            public int Code { get; set; }
-            public ResultInfo resultInfo { get; set; }
-        }
-
-
-        public class ResultInfo
-        { 
-            public int RCode { get; set; }
-            public string RMessage { get; set; }
-        }
-
 
         static List<Dictionary<String, Object>> GetParamDicForSimpleObj<T>(IEnumerable<T> list, bool needProcessEnumType, Type EnumTypeRepresent) where T : new()
         {
@@ -140,13 +105,13 @@ static bool Test3()
                         object temp = null;
                         if (EnumTypeRepresent == typeof(int))
                         {
-                             temp = (int)Enum.Parse(p.PropertyType, v.ToString());
+                            temp = (int)Enum.Parse(p.PropertyType, v.ToString());
                         }
 
                         if (EnumTypeRepresent == typeof(char))
                         {
                             var obj = Enum.Parse(p.PropertyType, v.ToString());
-                            temp =  Convert.ChangeType(obj, typeof(char));
+                            temp = Convert.ChangeType(obj, typeof(char));
                         }
 
                         dynamicProperties.Add(p.Name, temp);
@@ -159,123 +124,7 @@ static bool Test3()
 
                 result.Add(dynamicProperties);
             }
-
-           
-
             return result;
         }
-
-
-
-
-
-
-
-        public class MyT
-        {
-            public char MyPropertyCha { get; set; }
-            public int MyPropertyInt { get; set; }
-            public long MyPropertyLong { get; set; }
-            public string MyPropertyString { get; set; }
-            public DateTime MyPropertyDateTime { get; set; }
-            public MM MyPropertyMM { get; set; }
-
-        }
-
-        public class MM {
-            public int MyProperty { get; set; }
-
-            public string MyPropertyStr { get; set; }
-        }
-
-
-        public static string GetPhoneNumWithRandomOrder(string phoneNum)
-        {
-            if (string.IsNullOrWhiteSpace(phoneNum))
-            {
-                return string.Empty;
-            }
-            Random rad = new Random(DateTime.Now.Millisecond);
-
-            string[] phoneNums = phoneNum.Split(';');
-
-            var phoneObj = from item in phoneNums
-                           select new { order = rad.Next(), phoneNum = item };
-
-            var phones = from item in phoneObj
-                         orderby item.order
-                         select item.phoneNum;
-
-            return string.Join(";", phones);
-        }
     }
-
-    enum TestE { NN,MM }
-
-    public class TicketSendInsuranceConfigRequest
-    {
-        /// <summary>
-        /// 车票价格
-        /// </summary>
-        public decimal TicketPrice { get; set; }
-    }
-
-
-    public class TicketSendInsuranceConfigResponse
-    {
-        /// <summary>
-        /// 车票配送保障配置信息
-        /// </summary>
-        public TicketSendInsuranceConfig TicketSendInsuranceConfig { get; set; }
-
-        /// <summary>
-        /// 车票配送保障费
-        /// </summary>
-        public float TicketSendInsuranceFee { get; set; }
-    }
-
-    /// <summary>
-    /// 车票配送保障配置
-    /// </summary>
-    public class TicketSendInsuranceConfig
-    {
-        /// <summary>
-        /// 主标题
-        /// </summary>
-        public string MainTitile { get; set; }
-        /// <summary>
-        /// 副标题
-        /// </summary>
-        public string SubTitile { get; set; }
-
-        /// <summary>
-        /// 车票保障适用的快递集合
-        /// </summary>
-        public List<string> AvailableForExpress { get; set; }
-        /// <summary>
-        /// 是否开启
-        /// </summary>
-        public bool Enable { get; set; }
-        /// <summary>
-        /// 自描述
-        /// </summary>
-        public string SelfDes { get; set; }
-
-        /// <summary>
-        /// 价格区间
-        /// </summary>
-        public List<TicketSendInsurancePriceRange> Ranges { get; set; }
-    }
-
-    /// <summary>
-    ///  车票配送保障价格区间
-    /// </summary>
-    public class TicketSendInsurancePriceRange
-    {
-        public decimal LowRange { get; set; }
-        public decimal TopRange { get; set; }
-        public decimal Price { get; set; }
-    }
-
-
 }
